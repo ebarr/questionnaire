@@ -55,15 +55,14 @@ table {
   background-position: 0 0;
 }
 
-body {
-  background: white;
-  text-align: center;
-  font-family: 'IM Fell DW Pica SC', serif;
-  color: #0F2C79;
-  max-width: 500px;
-  margin: 0 auto;
+body li, body li:hover {
+  font-size: 18px;
+  border: solid .1em;
+  padding: 5px 10px;
+  margin: 0 25px 15px 25px;
 }
-body button {
+
+body button, body button:hover {
   margin-bottom: 40px;
   text-transform: uppercase;
   width: 200px;
@@ -74,6 +73,18 @@ body button {
   background-color: #D40802;
   color: white;
   padding: 8px 0;
+}
+
+body {
+  background: white;
+  text-align: center;
+  font-family: 'IM Fell DW Pica SC', serif;
+  color: #0F2C79;
+  max-width: 500px;
+  margin: 0 auto;
+}
+body button:hover {
+  border: solid .2em #0F2C79;
 }
 body h1 {
   font-size: 24px;
@@ -92,11 +103,9 @@ body h2 {
   padding: 15px 25px 10px 25px;
   color: rgba(15, 44, 121, 0.7);
 }
-body li {
-  font-size: 18px;
-  border: solid .1em;
-  padding: 5px 10px;
-  margin: 0 25px 15px 25px;
+body li:hover {
+  border: solid .2em;
+  background-color: rgba(32, 180, 255, 0.1);
 }
 body .introduction {
   background-color: #20B4FF;
