@@ -56,9 +56,57 @@ table {
 }
 
 body {
-  background: pink;
+  background: white;
+  text-align: center;
+  font-family: 'IM Fell DW Pica SC', serif;
+  color: #0F2C79;
+  max-width: 500px;
+  margin: 0 auto;
 }
-
-a {
-  color: #800000;
+body button {
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  width: 200px;
+  height: 35px;
+  font-size: 14px;
+  font-family: sans-serif;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  background-color: #D40802;
+  color: white;
+  padding: 8px 0;
+}
+body h1 {
+  font-size: 24px;
+  padding: 25px 10px;
+  color: white;
+}
+body p {
+  font-size: 20px;
+  font-weight: bold;
+  padding: 5px 5px;
+  margin: 10px 5px;
+}
+body h2 {
+  border-bottom: solid .1em;
+  text-align: left;
+  padding: 15px 25px 10px 25px;
+  color: rgba(15, 44, 121, 0.7);
+}
+body li {
+  font-size: 18px;
+  border: solid .1em;
+  padding: 5px 10px;
+  margin: 0 25px 15px 25px;
+}
+body .introduction {
+  background-color: #20B4FF;
+}
+body .introduction p {
+  color: white;
+  font-weight: normal;
+  padding: 10px 25px 40px 25px;
+}
+body i {
+  margin: 0 10px;
+  margin-bottom: 10px;
 }
