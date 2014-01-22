@@ -1,6 +1,9 @@
 @import "library";
 @import "reset";
 
+@import "compass/css3/transform";
+@import "compass/css3/transition";
+
 // Global templates
 
 %group:after {
@@ -14,7 +17,7 @@
     max-width: 960px;
 }
 
-%answers {
+%hover {
       font-size: 18px;
       border: solid .1em;
       padding: 5px 10px;
@@ -35,6 +38,10 @@
 
 // Mobile
 // @include respond-to(handheld) {
+  form {
+    @extend %container;
+  }
+
   body {
     background: white;
     text-align: center;
@@ -46,6 +53,33 @@
     button {
       @extend %button;
     }
+
+    input[type='radio'] {
+      display: none;
+
+      + label {
+          display: inline-block;
+          width: 70%;
+          font-size: 18px;
+          border: solid .1em;
+          padding: 5px 10px;
+          margin: 0 25px 15px 25px;
+
+          &:hover {
+            @extend %hover;
+            border: solid .2em;
+            background-color: fade-out(#20B4FF, .9);
+            }
+        }
+
+        &:checked + label {
+          @extend %hover;
+          border: solid .2em;
+          background-color: fade-out(#20B4FF, .9);
+          }
+    }
+
+
 
     button:hover {
         @extend %button;
@@ -73,11 +107,11 @@
     }
 
     li {
-     @extend %answers;
+     @extend %hover;
       }
 
     li:hover {
-      @extend %answers;
+      @extend %hover;
       border: solid .2em;
       background-color: fade-out(#20B4FF, .9);
     }
