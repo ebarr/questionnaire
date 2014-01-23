@@ -55,12 +55,12 @@ table {
   background-position: 0 0;
 }
 
-form {
+.base {
   margin: 0 auto;
   max-width: 960px;
 }
 
-body input[type='radio'] + label:hover, body input[type='radio']:checked + label, body li, body li:hover {
+body input[type='radio'] + label:hover, body input[type='radio']:checked + label {
   font-size: 18px;
   border: solid .1em;
   padding: 5px 10px;
@@ -78,6 +78,73 @@ body button, body button:hover {
   background-color: #D40802;
   color: white;
   padding: 8px 0;
+}
+
+.base {
+  -webkit-perspective: 1000;
+  -moz-perspective: 1000;
+  -ms-perspective: 1000;
+  -o-perspective: 1000;
+  perspective: 1000;
+}
+
+.card {
+  position: relative;
+  -webkit-transition: all 300ms ease;
+  -moz-transition: all 300ms ease;
+  -o-transition: all 300ms ease;
+  transition: all 300ms ease;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transform-origin: 50% 50% 50%;
+  -moz-transform-origin: 50% 50% 50%;
+  -ms-transform-origin: 50% 50% 50%;
+  -o-transform-origin: 50% 50% 50%;
+  transform-origin: 50% 50% 50%;
+  height: 100%;
+}
+.card:hover {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+.question, .answer {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  font-size: 18px;
+  border: solid .1em;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.answer {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+.answer:hover {
+  display: none;
+}
+.answer .correct {
+  background-color: lightgreen;
+  border: solid .2em;
+  font-weight: bold;
+}
+.answer .wrong {
+  color: rgba(15, 44, 121, 0.2);
 }
 
 body {
@@ -127,10 +194,6 @@ body h2 {
   padding: 15px 25px 10px 25px;
   color: rgba(15, 44, 121, 0.7);
 }
-body li:hover {
-  border: solid .2em;
-  background-color: rgba(32, 180, 255, 0.1);
-}
 body .introduction {
   background-color: #20B4FF;
 }
@@ -142,4 +205,7 @@ body .introduction p {
 body i {
   margin: 0 10px;
   margin-bottom: 10px;
+}
+body .results {
+  display: none;
 }
